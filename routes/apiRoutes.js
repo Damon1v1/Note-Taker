@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const app = require('express');
 const store = require('../db/store');
 
 router.get('/notes', (req, res) => {
@@ -23,5 +24,4 @@ router.delete('/notes/:id', (req, res) => {
       .then(() => res.json({ ok: true }))
       .catch((err) => res.status(500).json(err));
   });
-
 module.exports = router;

@@ -19,6 +19,5 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-
 // Sets up server to listen on previously established port 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
